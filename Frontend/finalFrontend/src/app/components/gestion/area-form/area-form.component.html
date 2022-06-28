@@ -1,0 +1,25 @@
+<div class="container py-5">
+    <div class="row">
+        <div class="col-6 offset-3 border-2 border border-dark text-center">
+            <h1>Area</h1>
+            <form>
+                <div class="col-4 offset-4 mb-3">
+                    <label for="exampleInputNombre" class="form-label">Nombre de Area</label>
+                    <input type="text" class="form-control" id="exampleInputNombre" name="nombreArea"
+                        [(ngModel)]="area.nombreArea">
+                </div>
+
+                <button *ngIf="accion=='new'" type="button" class="btn btn-primary"
+                    (click)="guardarArea()">Agregar</button>
+
+                <button *ngIf="accion=='update'" type="button" class="btn btn-primary"
+                    (click)="actualizarArea()">Actualizar</button>
+
+                <button type="button" class="btn btn-danger" (click)="cerrar()">Cerrar</button>
+
+            </form>
+        </div>
+
+    </div>
+
+</div>

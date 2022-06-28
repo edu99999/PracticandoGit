@@ -1,0 +1,24 @@
+<div class="container">
+    <div class="row">
+        <form>
+            <div class="form-group">
+                <label for="my-input">URL imagen</label>
+                <input id="my-input" class="form-control" type="text" [(ngModel)]="url" name="url">
+            </div>
+            <div class="form-group">
+                <label for="my-input">Text</label>
+                <input id="my-input" class="form-control" type="text" [(ngModel)]="mensaje" name="mensaje">
+            </div>
+
+            <div>
+                <input type="file" alife-file-to-base64 multiple (onFileChanged)="onFileChanges($event)"
+                    accept="image/x-png,image/gif,image/jpeg" />
+                <img [src]="stringimage" style="width: 100px;height: 100px;">
+            </div>
+
+            <button class="btn btn-primary" (click)="postFbConFoto()">Postear</button>
+
+        </form>
+    </div>
+
+</div>
